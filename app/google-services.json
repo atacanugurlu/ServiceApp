@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "125531192231",
+    "firebase_url": "https://serviceapp-aad37-default-rtdb.europe-west1.firebasedatabase.app",
     "project_id": "serviceapp-aad37",
     "storage_bucket": "serviceapp-aad37.appspot.com"
   },

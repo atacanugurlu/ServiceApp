@@ -3,6 +3,7 @@ package com.example.serviceapp.ui.authentication.login
 import android.app.Activity.RESULT_OK
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -11,18 +12,23 @@ import android.widget.Toast
 import androidx.lifecycle.Observer
 import com.example.serviceapp.R
 import com.example.serviceapp.databinding.LoginFragmentBinding
+import com.example.serviceapp.util.network.AuthenticationState
 import com.firebase.ui.auth.AuthUI
 import com.google.firebase.auth.FirebaseAuth
 import javax.inject.Inject
 import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract
 import com.firebase.ui.auth.data.model.FirebaseAuthUIAuthenticationResult
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 
 
 class LoginFragment : Fragment() {
 
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
-
+    private lateinit var database : DatabaseReference
     private val viewModel: LoginViewModel by lazy {
         ViewModelProvider(this, viewModelFactory)[LoginViewModel::class.java]
     }
@@ -37,9 +43,16 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding = LoginFragmentBinding.inflate(inflater)
-
+        database = Firebase.database.reference
         binding.loginButton.setOnClickListener { launchLoginFlow() }
 
+        /*
+        database.child("Users").child("63WCS8WY3HP06T4xyz6suyp9wzm1").child("role").get().addOnSuccessListener {
+        Log.i("firebase","${it.value}")}.addOnFailureListener{
+            Log.e("firebase", "Error getting data", it)
+        }
+
+         */
         return binding.root
     }
 
@@ -77,7 +90,7 @@ class LoginFragment : Fragment() {
 
         viewModel.authenticationState.observe(viewLifecycleOwner, Observer { authenticationState ->
             when (authenticationState) {
-                LoginViewModel.AuthenticationState.AUTHENTICATED -> {
+                AuthenticationState.AUTHENTICATED -> {
                     }
 
 

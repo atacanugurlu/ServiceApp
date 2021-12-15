@@ -17,5 +17,27 @@
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.serviceapp.ui.authentication.login.LoginFragment"
-        android:label="LoginFragment" />
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_parentMainFragment"
+            app:destination="@id/parentMainFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_driverMainFragment"
+            app:destination="@id/driverMainFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_teacherMainFragment"
+            app:destination="@id/teacherMainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/driverMainFragment"
+        android:name="com.example.serviceapp.ui.authentication.driver.DriverMainFragment"
+        android:label="DriverMainFragment" />
+    <fragment
+        android:id="@+id/parentMainFragment"
+        android:name="com.example.serviceapp.ui.authentication.parent.ParentMainFragment"
+        android:label="ParentMainFragment" />
+    <fragment
+        android:id="@+id/teacherMainFragment"
+        android:name="com.example.serviceapp.ui.authentication.teacher.TeacherMainFragment"
+        android:label="TeacherMainFragment" />
 </navigation>
