@@ -26,6 +26,5 @@ internal abstract class ViewModelModule {
     @ViewModelKey(LoginViewModel::class)
     protected abstract fun loginViewModel(loginViewModel: LoginViewModel): ViewModel
 
-
 }
 

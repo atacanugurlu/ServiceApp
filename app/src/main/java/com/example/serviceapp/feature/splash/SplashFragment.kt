@@ -35,16 +35,16 @@ class SplashFragment : Fragment() {
         val binding = SplashFragmentBinding.inflate(inflater)
 
         CoroutineScope(Dispatchers.Main).launch {
-            delay(4000)
-            Navigation.findNavController(binding.root)
-                .navigate(R.id.action_splashFragment_to_loginFragment)
+            delay(2000)
+            navigateToLoginPage(binding)
         }
 
-
-
-
-
         return binding.root
+    }
+
+    private fun navigateToLoginPage(binding: SplashFragmentBinding) {
+        Navigation.findNavController(binding.root)
+            .navigate(R.id.action_splashFragment_to_loginFragment)
     }
 
 
