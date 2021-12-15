@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.lifecycle.Observer
 import com.example.serviceapp.R
 import com.example.serviceapp.databinding.LoginFragmentBinding
 import com.firebase.ui.auth.AuthUI
@@ -72,5 +73,19 @@ class LoginFragment : Fragment() {
         }
     }
 
+    private fun observeAuthenticationState() {
+
+        viewModel.authenticationState.observe(viewLifecycleOwner, Observer { authenticationState ->
+            when (authenticationState) {
+                LoginViewModel.AuthenticationState.AUTHENTICATED -> {
+                    }
+
+
+                else -> {}
+            }
+
+
+        })
+    }
 
 }
