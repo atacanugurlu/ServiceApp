@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="LoginTheme" parent="FirebaseUI">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="colorButtonNormal">@color/colorAccent</item>
+        <item name="colorPrimary">@color/school_bus_yellow</item>
+        <item name="colorPrimaryDark">@color/cobalt_blue</item>
+        <item name="colorAccent">@color/school_bus_yellow</item>
+        <item name="colorButtonNormal">@color/school_bus_yellow</item>
         <item name="colorControlNormal">@android:color/white</item>
         <item name="colorControlActivated">@android:color/white</item>
         <item name="colorControlHighlight">@android:color/white</item>
@@ -15,5 +15,6 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:textColorHint">@android:color/white</item>
+        <item name="android:statusBarColor">@color/school_bus_yellow</item>
     </style>
 </resources>
