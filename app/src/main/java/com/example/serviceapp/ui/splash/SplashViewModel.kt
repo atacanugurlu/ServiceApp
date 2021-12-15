@@ -1,4 +1,4 @@
-package com.example.serviceapp.feature.splash
+package com.example.serviceapp.ui.splash
 
 import androidx.lifecycle.ViewModel
 import javax.inject.Inject

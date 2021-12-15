@@ -1,4 +1,4 @@
-package com.example.serviceapp.util
+package com.example.serviceapp.util.image
 
 import android.content.Context
 import android.widget.ImageView

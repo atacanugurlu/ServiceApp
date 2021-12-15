@@ -1,4 +1,4 @@
-package com.example.serviceapp.feature.splash
+package com.example.serviceapp.ui.splash
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -6,9 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.LifecycleCoroutineScope
-import androidx.navigation.NavAction
-import androidx.navigation.NavDirections
 import androidx.navigation.Navigation
 import com.example.serviceapp.R
 import com.example.serviceapp.databinding.SplashFragmentBinding

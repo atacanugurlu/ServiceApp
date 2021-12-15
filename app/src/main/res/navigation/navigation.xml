@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.example.serviceapp.feature.splash.SplashFragment"
+        android:name="com.example.serviceapp.ui.splash.SplashFragment"
         android:label="splash_fragment"
         tools:layout="@layout/splash_fragment" >
         <action
@@ -16,6 +16,6 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.serviceapp.feature.authentication.login.LoginFragment"
+        android:name="com.example.serviceapp.ui.authentication.login.LoginFragment"
         android:label="LoginFragment" />
 </navigation>
